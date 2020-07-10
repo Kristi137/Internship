@@ -4,79 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-        
     <header class="links">
-        <a href="#" class="catalog">КАТАЛОГ</a>
-        <a href="#" class="favorite">ИЗБРАННОЕ</a>
+        <a href="#" onclick="showCatalog()" class="link catalog active">КАТАЛОГ</a>
+        <a href="#" onclick="showFavorite()" class="link favorite">ИЗБРАННОЕ</a>
     </header>
-    
+ 
+   
+  <div id="catalog" style="display: none;">
     <ul class="col_ul">
-      <li> <span onclick="showul(event)">Leanne Grahham</span>
-        <ul class="hide">
-          <li><span onclick="showul(event)">quidem molestiaei enim</span>
-            <ul class="hide">
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img class="trigger" src="https://via.placeholder.com/150/8e973b" id="img1" alt="">
-              </li>
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img class="trigger" src="https://via.placeholder.com/150/121fa4" id="img2" alt="">
-              </li>
-            </ul>
-          </li>
-  
-          <li><span onclick="showul(event)">quidem molestiaei enim</span>
-            <ul class="hide">
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/8e973b" id="img3"alt="">
-              </li>
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/121fa4" id="img4" alt="">
-              </li>
-            </ul>
-          </li>
-  
-        </ul>
-      </li>
-      <li> <span onclick="showul(event)">Leanne Grahham</span>
-        <ul class="hide">
-          <li><span onclick="showul(event)">quidem molestiaei enim</span>
-            <ul class="hide">
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/8e973b" alt="">
-              </li>
-              
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/121fa4" alt="">
-              </li>
-            </ul>
-          </li>
-  
-          <li><span onclick="showul(event)">quidem molestiaei enim</span>
-            <ul class="hide">
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/8e973b" alt="">
-              </li>
-              <li>
-                  <span class="fa fa-star star"></span>
-                  <img src="https://via.placeholder.com/150/121fa4" alt="">
-              </li>
-            </ul>
-          </li>
-  
-        </ul>
-      </li>
-    </ul>
+        <li> <span onclick="showul(event)">Leanne Grahham</span>
+          <ul class="hide">
+            <li><span onclick="showul(event)">quidem molestiaei enim</span>
+              <ul class="hide">
+                <li>
+                  <i class="fa fa-star star" aria-hidden="true"></ilick=>
+                    <img class="trigger" src="https://via.placeholder.com/150/8e973b" id="img1" title="non sunt voluptatem placeat consequuntur rem incidunt" alt="">             
+                </li>
+                <li>
+                  <i class="fa fa-star star2 star" aria-hidden="true"></ionclick=>
+                    <img class="trigger" src="https://via.placeholder.com/150/121fa4" id="img2" title="eveniet pariatur quia nobis reiciendis laboriosam ea" alt="">
+                </li>
+              </ul>
+            </li>    
+            <li><span onclick="showul(event)">sunt qui excepturi placeat culpa</span>
+              <ul class="hide">
+                <li>
+                  <i class="fa fa-star star star3" aria-hidden="true"></iclick=>
+                    <img class="trigger" src="https://via.placeholder.com/150/6efc5f" id="img3" title="soluta et harum aliquid officiis ab omnis consequatur" alt="">
+                </li>
+                <li>
+                  <i class="fa fa-star star star4" aria-hidden="true"></i>
+                    <img class="trigger" src="https://via.placeholder.com/150/aa8f2e" id="img4" title="ut ex quibusdam dolore mollitia" alt="">
+                </li>
+              </ul>
+            </li>    
+          </ul>
+        </li>
+        <li> <span onclick="showul(event)">Romaguera Crona</span>
+          <ul class="hide">
+            <li><span onclick="showul(event)">consequatur autem dolobrius natus enim</span>
+              <ul class="hide">
+                <li>
+                  <i class="fa fa-star star star5" aria-hidden="true"></i>
+                    <img class="trigger" src="https://via.placeholder.com/150/8e973b" title="voluptatem consequatur totam qui aut iure est vel" alt="">
+                </li>
+                
+                <li>
+                  <i class="fa fa-star star star6" aria-hidden="true"></i>
+                    <img class="trigger" src="https://via.placeholder.com/150/6efc5f" title="soluta et harum aliquid officiis ab omnis consequatur" alt="">
+                </li>
+              </ul>
+            </li>
+    
+            <li><span onclick="showul(event)">ab rerum non rerum consequatur ut ea unde</span>
+              <ul class="hide">
+                <li>
+                  <i class="fa fa-star star star7" aria-hidden="true"></i>
+                    <img class="trigger" src="https://via.placeholder.com/150/6efc5f"  title="soluta et harum aliquid officiis ab omnis consequatur" alt="">
+                </li>
+                <li>
+                  <i class="fa fa-star star star8" aria-hidden="true"></i>
+                    <img class="trigger" src="https://via.placeholder.com/150/8e973b" title="voluptatem consequatur totam qui aut iure est vel" alt="">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="favorite" class="hide">
+      <ul class="" id="favorite_ul">
+        
+      </ul>
+    </div>
+
 
     <script src="app.js"></script>
 </body>
 </html>
+
