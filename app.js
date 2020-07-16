@@ -118,5 +118,21 @@ window.addEventListener("click", function(event) {
 	}
 });
 
+let star = document.querySelectorAll('.star');
+
+star.forEach(function(el){
+	el.addEventListener('click', function() {
+		el.classList.toggle('orange');
+	})
+})
+
+let link = document.querySelectorAll('.link');
+
+link.forEach(button => {
+	button.addEventListener('click', function() {
+		link.forEach(btn => btn.classList.remove('active'));
+		this.classList.add('active');
+	})
+})
 
 
