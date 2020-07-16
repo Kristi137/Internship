@@ -11,6 +11,23 @@ body {
     padding: 40px;
 }
 
+.link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    width: 200px;
+    height: 30px;
+    border: 1px solid rgb(186, 243, 243);
+    border-radius: 20px;
+    padding-top: 5px;
+    font-size: 21px;
+}
+
+.links .active {
+    background-color: #00b5de;
+    color: #fff;
+}
+
 ul li {
     margin-top: 20px;    
     cursor: pointer;   
