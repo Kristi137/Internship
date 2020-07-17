@@ -37,7 +37,7 @@ function showFavorite() {
 			<i onclick="removeFromLS(event)" class="fa img fa-star star orange star-ls" aria-hidden="true"></i>`
 			newLi.appendChild(createImg);
 			favoriteUl.appendChild(newLi); 
-		})		
+		});	
 	} else {		
 		favorites.innerText = `Nothing Selected!`;
 	} 
@@ -60,6 +60,27 @@ function showImage (event) {
 	imageToAdd(imageTo);
 }
 
+function removeFromLS(event) {
+	
+	event.target.parentElement.remove();
+	let imageTo = event.target.nextElementSibling;
+	imageTo = imageTo.src;
+	imageToAdd(imageTo);
+	let images = document.querySelectorAll('#catalog img');
+	let storage = localStorage.getItem('images');
+	
+	images.forEach(img => {
+		if(storage.includes(img.src)) {			
+			let star = img.parentElement.firstElementChild;
+				
+		} else {
+			let star = img.parentElement.firstElementChild;
+			star.classList.remove('orange');
+		}
+	})
+
+}
+
 function imageToAdd (image) {
 	let storage = localStorage.getItem('images');
 
@@ -77,14 +98,6 @@ function imageToAdd (image) {
 	}
 }
 
-function removeFromLS(event) {
-	
-	event.target.parentElement.remove();
-	let imageTo = event.target.nextElementSibling;
-	imageTo = imageTo.src;
-	imageToAdd(imageTo);
-
-}
 
 
 let modal = document.querySelector(".modal");
@@ -118,5 +131,38 @@ window.addEventListener("click", function(event) {
 	}
 });
 
+let stars = document.querySelectorAll('.star');
 
+stars.forEach(function(el){
+	el.addEventListener('click', function() {
+		el.classList.toggle('orange');
+	})
+})
+
+let tabs = document.querySelectorAll('.link');
+
+tabs.forEach(button => {
+	button.addEventListener('click', function() {
+		tabs.forEach(btn => btn.classList.remove('active'));
+		this.classList.add('active');
+	})
+})
+
+function toggleCatalogImagesClass() {
+	let images = document.querySelectorAll('#catalog img');
+	let storage = localStorage.getItem('images');
+	
+	images.forEach(img => {
+		if(storage.includes(img.src)) {			
+			let star = img.parentElement.firstElementChild;
+			star.classList.add('orange');			
+		} else {
+			let star = img.parentElement.firstElementChild;
+			star.classList.remove('orange');
+		}
+	})
+	
+}
+
+toggleCatalogImagesClass();
 
